@@ -1,0 +1,68 @@
+site_name: Documentação
+
+
+repo_name: docs
+repo_url: https://github.com/IA-QVT/docs
+
+edit_uri: ""
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+
+  logo: stylesheets/assets/logo.png
+
+  favicon: stylesheets/assets/logo.png
+
+  icon:
+    repo: fontawesome/brands/github
+
+  features:
+    - navigation.tabs
+    - navigation.top
+  
+extra_css:
+  - stylesheets/extra.css
+  
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/IA-QVT/docs
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Artefatos:
+    - Início: documentation.md
+    - Product Backlog: backlog.md
+
+#     - Protótipos: 
+#     - Identidade Visual: 
+#     - Documento de arquitetura: 
+#     - Pipeline: 
+#     - Gráfico de Gantt: 
+#     - Testes de sistema/aceitação: 
+#     - Metodologia:
+#       - Templates:
+#         - Planning: 
+#         - Review: 
+#         - Retrospective: 
+#       - Risco:
+#         - Planejamento: 
+#         - Planos de mitigação:
+#       - Metricas de Qualidade: 
+#       - Custo: 
+#         - Método: 
+#         - Análise: 
+#       - Ferramentas: 
+#       - Agenda: 
+#       - Sprints: 
+#   - Artefatos Pré-Sprints:
+#     - Lean Inception: 
+#     - Product Backlog Building: 
+#     - Informações dos Membros: 
