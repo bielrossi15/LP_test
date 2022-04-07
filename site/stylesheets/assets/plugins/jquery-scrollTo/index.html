@@ -1,0 +1,883 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>jQuery.scrollTo - LP Test</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.3020aac5.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#jqueryscrollto" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="LP Test" class="md-header-nav__button md-logo">
+          
+            <img src="../../logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              LP Test
+            </span>
+            <span class="md-header-nav__topic">
+              jQuery.scrollTo
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/bielrossi15/LP_test" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    LP_test
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="LP Test" class="md-nav__button md-logo">
+      
+        <img src="../../logo.png" width="48" height="48">
+      
+    </a>
+    LP Test
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/bielrossi15/LP_test" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    LP_test
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Stylesheets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Stylesheets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1">
+      Assets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        Assets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1-1" type="checkbox" id="nav-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1-1">
+      Plugins
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-1-1">
+        Plugins
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1-1-1" type="checkbox" id="nav-1-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1-1-1">
+      jquery scrollTo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-1-1-1">
+        jquery scrollTo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        jQuery.scrollTo
+      </label>
+    
+    <a href="./" title="jQuery.scrollTo" class="md-nav__link md-nav__link--active">
+      jQuery.scrollTo
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-a-public-cdn" title="Using a public CDN" class="md-nav__link">
+    Using a public CDN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-manually" title="Downloading Manually" class="md-nav__link">
+    Downloading Manually
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" title="2.0" class="md-nav__link">
+    2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#element" title="element" class="md-nav__link">
+    element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" title="target" class="md-nav__link">
+    target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" title="settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-shorthand" title="window shorthand" class="md-nav__link">
+    window shorthand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-default-settings" title="Changing the default settings" class="md-nav__link">
+    Changing the default settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-the-animation" title="Stopping the animation" class="md-nav__link">
+    Stopping the animation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onafter-and-requestanimationframe" title="onAfter and requestAnimationFrame" class="md-nav__link">
+    onAfter and requestAnimationFrame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" title="Demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complementary-plugins" title="Complementary plugins" class="md-nav__link">
+    Complementary plugins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jquerylocalscroll" title="jQuery.localScroll" class="md-nav__link">
+    jQuery.localScroll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jqueryserialscroll" title="jQuery.serialScroll" class="md-nav__link">
+    jQuery.serialScroll
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="License" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-a-public-cdn" title="Using a public CDN" class="md-nav__link">
+    Using a public CDN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-manually" title="Downloading Manually" class="md-nav__link">
+    Downloading Manually
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" title="2.0" class="md-nav__link">
+    2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#element" title="element" class="md-nav__link">
+    element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" title="target" class="md-nav__link">
+    target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" title="settings" class="md-nav__link">
+    settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-shorthand" title="window shorthand" class="md-nav__link">
+    window shorthand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-default-settings" title="Changing the default settings" class="md-nav__link">
+    Changing the default settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-the-animation" title="Stopping the animation" class="md-nav__link">
+    Stopping the animation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onafter-and-requestanimationframe" title="onAfter and requestAnimationFrame" class="md-nav__link">
+    onAfter and requestAnimationFrame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" title="Demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complementary-plugins" title="Complementary plugins" class="md-nav__link">
+    Complementary plugins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jquerylocalscroll" title="jQuery.localScroll" class="md-nav__link">
+    jQuery.localScroll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jqueryserialscroll" title="jQuery.serialScroll" class="md-nav__link">
+    jQuery.serialScroll
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="License" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="jqueryscrollto">jQuery.scrollTo</h1>
+<p>Lightweight, cross-browser and highly customizable animated scrolling with jQuery</p>
+<p><a href="http://flattr.com/thing/2081384/fleslerjquery-scrollTo-on-GitHub"><img alt="" src="http://api.flattr.com/button/flattr-badge-large.png" /></a>
+<a href="http://badge.fury.io/gh/flesler%2Fjquery.scrollTo"><img alt="GitHub version" src="https://badge.fury.io/gh/flesler%2Fjquery.scrollTo.svg" /></a>
+<a href="http://libscore.com/#jQuery.fn.scrollTo"><img alt="libscore" src="http://img.shields.io/badge/libscore-31656-brightgreen.svg?style=flat-square" /></a></p>
+<h2 id="installation">Installation</h2>
+<p>The plugin requires jQuery 1.8 or higher.</p>
+<p>Via <a href="https://github.com/flesler/jquery.scrollTo/blob/master/bower.json">bower</a>:</p>
+<pre><code class="bash">bower install jquery.scrollTo
+</code></pre>
+
+<p>Via <a href="https://www.npmjs.com/package/jquery.scrollto">npm</a>:</p>
+<pre><code class="bash">npm install jquery.scrollto
+</code></pre>
+
+<p>Via <a href="https://packagist.org/packages/flesler/jquery.scrollTo">packagist</a>:</p>
+<pre><code class="php">php composer.phar require --prefer-dist flesler/jquery.scrollto &quot;*&quot;
+</code></pre>
+
+<h3 id="using-a-public-cdn">Using a public CDN</h3>
+<p>CDN provided by <a href="http://www.jsdelivr.com/#!jquery.scrollto">jsdelivr</a></p>
+<pre><code class="html">&lt;script src=&quot;//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>CDN provided by <a href="https://cdnjs.com/libraries/jquery-scrollTo">cdnjs</a></p>
+<pre><code class="html">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h3 id="downloading-manually">Downloading Manually</h3>
+<p>If you want the latest stable version, get the latest release from the <a href="https://github.com/flesler/jquery.scrollTo/releases">releases page</a>.</p>
+<h2 id="20">2.0</h2>
+<p>Version 2.0 has been recently released. It is mostly backwards compatible, if you have any issue first check <a href="https://github.com/flesler/jquery.scrollTo/wiki/Migrating-to-2.0">this link</a>.
+If your problem is not solved then go ahead and <a href="https://github.com/flesler/jquery.scrollTo/issues/new">report the issue</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>jQuery.scrollTo's signature is designed to resemble <a href="http://api.jquery.com/animate/">$().animate()</a>.</p>
+<pre><code class="js">$(element).scrollTo(target[,duration][,settings]);
+</code></pre>
+
+<h3 id="element"><em>element</em></h3>
+<p>This must be a scrollable element, to scroll the whole window use <code>$(window)</code>.</p>
+<h3 id="target"><em>target</em></h3>
+<p>This defines the position to where <code>element</code> must be scrolled. The plugin supports all these formats:
+ * A number with a fixed position: <code>250</code>
+ * A string with a fixed position with px: <code>"250px"</code>
+ * A string with a percentage (of container's size): <code>"50%"</code>
+ * A string with a relative step: <code>"+=50px"</code>
+ * An object with <code>left</code> and <code>top</code> containining any of the aforementioned: <code>{left:250, top:"50px"}</code>
+ * The string <code>"max"</code> to scroll to the end.
+ * A string selector that will be relative to the element to scroll: <code>".section:eq(2)"</code>
+ * A DOM element, probably a child of the element to scroll: <code>document.getElementById("top")</code>
+ * A jQuery object with a DOM element: <code>$("#top")</code></p>
+<h3 id="settings"><em>settings</em></h3>
+<p>The <code>duration</code> parameter is a shortcut to the setting with the same name.
+These are the supported settings:
+ * <strong>axis</strong>: The axes to animate: <code>xy</code> (default), <code>x</code>, <code>y</code>, <code>yx</code>
+ * <strong>interrupt</strong>: If <code>true</code> will cancel the animation if the user scrolls. Default is <code>false</code>
+ * <strong>limit</strong>: If <code>true</code> the plugin will not scroll beyond the container's size. Default is <code>true</code>
+ * <strong>margin</strong>: If <code>true</code>, subtracts the margin and border of the <code>target</code> element. Default is <code>false</code>
+ * <strong>offset</strong>: Added to the final position, can be a number or an object with <code>left</code> and <code>top</code>
+ * <strong>over</strong>: Adds a % of the <code>target</code> dimensions: <code>{left:0.5, top:0.5}</code>
+ * <strong>queue</strong>: If <code>true</code> will scroll one <code>axis</code> and then the other. Default is <code>false</code>
+ * <strong>onAfter(target, settings)</strong>: A callback triggered when the animation ends (jQuery's <code>complete()</code>)
+ * <strong>onAfterFirst(target, settings)</strong>: A callback triggered after the first axis scrolls when queueing</p>
+<p>You can add any setting supported by <a href="http://api.jquery.com/animate/#animate-properties-options">$().animate()</a> as well:</p>
+<ul>
+<li><strong>duration</strong>: Duration of the animation, default is <code>0</code> which makes it instantaneous</li>
+<li><strong>easing</strong>: Name of an easing equation, you must register the easing function: <code>swing</code></li>
+<li><strong>fail()</strong>: A callback triggered when the animation is stopped (f.e via <code>interrupt</code>)</li>
+<li><strong>step()</strong>: A callback triggered for every animated property on every frame</li>
+<li><strong>progress()</strong>: A callback triggered on every frame</li>
+<li>And more, check jQuery's <a href="http://api.jquery.com/animate/#animate-properties-options">documentation</a></li>
+</ul>
+<h3 id="window-shorthand">window shorthand</h3>
+<p>You can use <code>$.scrollTo(...)</code> as a shorthand for <code>$(window).scrollTo(...)</code>.</p>
+<h3 id="changing-the-default-settings">Changing the default settings</h3>
+<p>As with most plugins, the default settings are exposed so they can be changed.</p>
+<pre><code class="js">$.extend($.scrollTo.defaults, {
+  axis: 'y',
+  duration: 800
+});
+</code></pre>
+
+<h3 id="stopping-the-animation">Stopping the animation</h3>
+<p>jQuery.scrollTo ends up creating ordinary animations which can be stopped by calling <a href="http://api.jquery.com/stop/">$().stop()</a> or <a href="http://api.jquery.com/finish/">$().finish()</a> on the same element you called <code>$().scrollTo()</code>, including the <code>window</code>.
+Remember you can pass a <code>fail()</code> callback to be called when the animation is stopped.</p>
+<h3 id="onafter-and-requestanimationframe">onAfter and requestAnimationFrame</h3>
+<p>jQuery.scrollTo has a <code>onAfter</code> callback for work that runs after the animation finishes. It will be called before the <code>scroll</code> event fires. To combat this you can use  <a href="http://caniuse.com/#feat=requestanimationframe">requestAnimationFrame</a> to do work on the next tick. It is available in many browsers, but you may want to <a href="https://github.com/chrisdickinson/raf">polyfill</a> for the few it does not support.</p>
+<pre><code class="js">$.scrollTo(100, {
+  onAfter: function() {
+    requestAnimationFrame(function() {
+        $(&quot;.result&quot;).addClass(&quot;selected&quot;);
+    });
+  }
+});
+</code></pre>
+
+<h2 id="demo">Demo</h2>
+<p>Check the <a href="http://demos.flesler.com/jquery/scrollTo/">demo</a> to see every option in action.</p>
+<h2 id="complementary-plugins">Complementary plugins</h2>
+<p>There are two plugins, also created by me that depend on jQuery.scrollTo and aim to simplify certain use cases.</p>
+<h3 id="jquerylocalscroll"><a href="https://github.com/flesler/jquery.localScroll">jQuery.localScroll</a></h3>
+<p>This plugin makes it very easy to implement anchor navigation.
+If you don't want to include another plugin, you can try using something like <a href="https://gist.github.com/flesler/3f3e1166690108abf747">this minimalistic gist</a>.</p>
+<h3 id="jqueryserialscroll"><a href="https://github.com/flesler/jquery.serialScroll">jQuery.serialScroll</a></h3>
+<p>This plugin simplifies the creation of scrolling slideshows.</p>
+<h2 id="license">License</h2>
+<p>(The MIT License)</p>
+<p>Copyright (c) 2007 Ariel Flesler <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#102;&#108;&#101;&#115;&#108;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#97;&#102;&#108;&#101;&#115;&#108;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="CHANGELOG/" title="Changelog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Changelog
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>
