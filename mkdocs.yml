@@ -1,8 +1,8 @@
-site_name: Documentação
+site_name: LP Test
 
 
-repo_name: docs
-repo_url: https://github.com/IA-QVT/docs
+repo_name: LP_test
+repo_url: https://github.com/bielrossi15/LP_test
 
 edit_uri: ""
 
@@ -18,51 +18,12 @@ theme:
 
   icon:
     repo: fontawesome/brands/github
-
-  features:
-    - navigation.tabs
-    - navigation.top
   
 extra_css:
   - stylesheets/extra.css
   
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/IA-QVT/docs
-
 markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-nav:
-  - Artefatos:
-    - Início: documentation.md
-    - Product Backlog: backlog.md
-
-#     - Protótipos: 
-#     - Identidade Visual: 
-#     - Documento de arquitetura: 
-#     - Pipeline: 
-#     - Gráfico de Gantt: 
-#     - Testes de sistema/aceitação: 
-#     - Metodologia:
-#       - Templates:
-#         - Planning: 
-#         - Review: 
-#         - Retrospective: 
-#       - Risco:
-#         - Planejamento: 
-#         - Planos de mitigação:
-#       - Metricas de Qualidade: 
-#       - Custo: 
-#         - Método: 
-#         - Análise: 
-#       - Ferramentas: 
-#       - Agenda: 
-#       - Sprints: 
-#   - Artefatos Pré-Sprints:
-#     - Lean Inception: 
-#     - Product Backlog Building: 
-#     - Informações dos Membros: 
